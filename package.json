@@ -1,0 +1,56 @@
+{
+  "name": "e-tailoring",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db": "npm run db:setup",
+    "seed": "npm run db:seed",
+    "db:setup": "node scripts/setup-db.js",
+    "db:seed": "node scripts/seed-db.js",
+    "db:migrate:collected": "node scripts/migrate-add-collected-status.js",
+    "db:migrate:bank": "node scripts/migrate-add-bank-details.js",
+    "db:migrate:payment": "node scripts/migrate-add-payment-receipt.js",
+    "db:migrate:notifications": "node scripts/migrate-add-notifications.js",
+    "db:migrate:design-images": "node scripts/migrate-add-design-images.js",
+    "db:check-connections": "node scripts/check-mysql-connections.js"
+  },
+  "dependencies": {
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "mysql2": "^3.6.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.22.4",
+    "react-hook-form": "^7.49.2",
+    "@hookform/resolvers": "^3.3.2",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1",
+    "date-fns": "^3.0.6",
+    "lucide-react": "^0.303.0",
+    "recharts": "^2.10.3",
+    "react-hot-toast": "^2.4.1",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.5",
+    "typescript": "^5.3.3",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "ts-node": "^10.9.2",
+    "dotenv": "^16.3.1"
+  }
+}
+
